@@ -1,0 +1,46 @@
+{
+	"name": "vue-accessor",
+	"version": "0.1.0",
+	"author": "Gerald <gera2ld@live.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "jest",
+		"build:js": "unbuild",
+		"build": "run-s test build:js",
+		"prepublishOnly": "run-s build"
+	},
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"keywords": [
+		"vue",
+		"vuex"
+	],
+	"files": [
+		"dist"
+	],
+	"peerDependencies": {
+		"vue": "^2.7 || ^3"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.8",
+		"jest": "^29.7.0",
+		"npm-run-all": "^4.1.5",
+		"ts-jest": "^29.1.1",
+		"typescript": "^5.2.2",
+		"unbuild": "^1.2.1",
+		"vue": "^3.4.15"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	}
+}
